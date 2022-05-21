@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { NotFound, PhonesList, PhoneDetails } from "./pages";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,7 +11,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
         <Route path="/phones" element={<App />}>
           <Route index element={<PhonesList />} />
           <Route path="/phones/:id" element={<PhoneDetails />} />

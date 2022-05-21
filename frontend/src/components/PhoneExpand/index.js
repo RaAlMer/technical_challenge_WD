@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./PhoneExpand.module.scss";
 import img_0 from "../../public/images/img_0.png";
 import img_1 from "../../public/images/img_1.png";
@@ -17,6 +17,7 @@ export function PhoneExpand() {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const images = [img_0, img_1, img_2, img_3, img_4, img_5, img_6, img_7];
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -26,7 +27,10 @@ export function PhoneExpand() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        if(err.response.status === 404) {
+          setLoading(false);
+          navigate("/404");
+        }
       });
   }, []);
 

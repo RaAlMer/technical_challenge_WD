@@ -5,6 +5,9 @@ dotenv.config();
 
 const app = express();
 
+// Use cors so the backend can communicate with the frontend
+app.use(cors());
+
 app.use(express.json());
 
 // Routes for the API
