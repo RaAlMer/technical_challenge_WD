@@ -8,7 +8,7 @@ export function NotFound() {
       <div className={styles.text}>
         <h1>404</h1>
         <p>Oops, page not found</p>
-        <Link className={styles.link} to="/">Go back to home</Link>
+        <Link className={styles.link} to="/phones">Go back to phones</Link>
       </div>
     </>
   );

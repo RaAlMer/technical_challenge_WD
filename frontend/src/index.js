@@ -11,10 +11,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/phones" element={<PhonesList />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/phones" element={<App />}>
+          <Route index element={<PhonesList />} />
           <Route path="/phones/:id" element={<PhoneDetails />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

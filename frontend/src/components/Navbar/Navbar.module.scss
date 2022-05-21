@@ -1,0 +1,35 @@
+$background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+.Navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $background;
+  z-index: 12;
+  max-width: 100%;
+}
+.Navbar__list {
+  list-style-type: none;
+  background: $background;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Navbar__list__item {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 500;
+    &:hover {
+      color: #2c0db9;
+    }
+  }
+}

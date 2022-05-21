@@ -7,13 +7,8 @@ export function Navbar() {
     <nav className={styles.Navbar}>
         <ul className={styles.Navbar__list}>
             <li className={styles.Navbar__list__item}>
-                <Link to="/" className={styles.Navbar__list__item__link}>
-                    Home
-                </Link>
-            </li>
-            <li className={styles.Navbar__list__item}>
-                <Link to="/about" className={styles.Navbar__list__item__link}>
-                    About
+                <Link to="/phones" className={styles.Navbar__list__item__link}>
+                    Phones
                 </Link>
             </li>
         </ul>

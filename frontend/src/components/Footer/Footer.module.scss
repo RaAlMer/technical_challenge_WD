@@ -1,0 +1,26 @@
+$color: white;
+.Footer {
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  .Footer__text {
+    font-size: 24px;
+    color: $color;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: $color;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .Footer {
+    .Footer__text {
+      font-size: 12px;
+    }
+  }
+}
